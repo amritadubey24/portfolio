@@ -1,14 +1,3 @@
-/**
-* Template Name: iPortfolio
-* Updated: May 30 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
@@ -361,6 +350,13 @@ section {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+}
+.about .content ul li a{
+  color: #272829;
+}
+.about .content ul li a:hover{
+  color: #040b14;
+  text-decoration: underline;
 }
 
 .about .content ul strong {
@@ -882,6 +878,13 @@ section {
   font-size: 14px;
   color: #173b6c;
 }
+.contact .info p a{
+  color: #173b6c;
+}
+.contact .info p a:hover{
+  color: #040b14;
+  text-decoration: underline;
+}
 
 .contact .info .email p {
   padding-top: 5px;
@@ -1024,6 +1027,13 @@ section {
   }
 }
 .resume-item a{
+  color: #272829;
+}
+.resume-item a:hover{
+  color: #040b14;
+  text-decoration: underline;
+}
+.resume-item .button{
   background: #149ddd;
   border: 0;
   padding: 10px 24px;
@@ -1031,7 +1041,7 @@ section {
   transition: 0.4s;
   border-radius: 4px;
 }
-.resume-item a:hover{
+.resume-item button:hover{
   background: #37b3ed;
 }
 /*--------------------------------------------------------------

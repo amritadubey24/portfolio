@@ -1,0 +1,925 @@
+@import "_variables";
+
+// ========================================== header CSS ========================================== //
+.header{
+    top: 0;
+    left: 0;
+    transition: .5s;
+    z-index: 9997;
+    padding: 0 15px;
+    overflow-y: auto;
+    position: fixed;
+    bottom: 0;
+    width: 300px;
+    background: $dark-color;
+    .profile{
+        img {
+            margin: 15px auto;
+            display: block;
+            width: 120px;
+            border: 8px solid $color1
+        }
+        h1{
+            font-family: Poppins, sans-serif;
+            font-size: 24px;
+            margin: 0;
+            padding: 0;
+            font-weight: 600;
+            -moz-text-align-last: center;
+            text-align-last: center;
+            a{
+                color: $white;
+                text-decoration: none;
+                &:hover{
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+        }
+        .social-links{
+            a {
+                font-size: 18px;
+                display: inline-block;
+                background: #212431;
+                color: $white;
+                line-height: 1;
+                padding: 8px 0;
+                margin-right: 4px;
+                border-radius: 50%;
+                text-align: center;
+                width: 36px;
+                height: 36px;
+                transition: .3s;
+                &:hover{
+                    background: $secondary-color;
+                    color: $white;
+                    text-decoration: none
+                }
+            }
+        }
+    }
+}
+.nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu {
+    padding: 30px 0 0;
+    .active, &:focus, &:hover{
+        text-decoration: none;
+        color: $white ;
+    }
+    a{
+        display: flex;
+        align-items: center;
+        color: #a8a9b4;
+        padding: 12px 15px;
+        margin-bottom: 8px;
+        transition: .3s;
+        font-size: 15px;
+        i{
+            font-size: 24px;
+            padding-right: 8px;
+            color: #6f7180
+        }
+        &:focus{
+            display: flex;
+            align-items: center;
+            color: #a8a9b4;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            transition: .3s;
+            font-size: 15px;
+            i{
+                font-size: 24px;
+                padding-right: 8px;
+                color: #6f7180
+            }
+        }
+    }
+    ul{
+        li{
+            position: relative;
+            white-space: nowrap;
+            &:hover{
+                a{
+                    text-decoration: none;
+                    color: $white
+                }
+            }
+        }
+    }
+}
+
+
+
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu a:hover i,
+.nav-menu li:hover>a i,
+.portfolio #portfolio-flters li.filter-active,
+.portfolio #portfolio-flters li:hover,
+.services .icon-box:hover .icon i,
+.services .title a:hover {
+    color: $secondary-color
+}
+
+.mobile-nav-toggle {
+    position: fixed;
+    top: 15px;
+    z-index: 9998;
+    border: 0;
+    font-size: 24px;
+    outline: 0 !important;
+    background-color: $secondary-color;
+    color: $white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    right: 15px;
+    transition: .4s;
+    width: 40px;
+    height: 40px;  
+    
+}
+
+.mobile-nav-active {
+    overflow: hidden;
+    #header {
+        left: 0;
+    }
+}
+.back-to-top {    
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    bottom: 15px;
+    z-index: 996;
+    background: $secondary-color;
+    right: 15px;
+    transition: .4s;
+    width: 40px;
+    height: 40px;  
+    
+    &.active {
+        visibility: visible;
+        opacity: 1
+    }
+    
+    
+    &:hover{       
+        background: #2eafec;
+        color: $white        
+    }
+    border-radius: 50px;
+    i {
+        font-size: 28px;
+        color: $white;
+        line-height: 0;
+    }
+    
+}
+// ========================================== Hero CSS ========================================== //
+.hero__section{ 
+    width: 100%;
+    height: 100vh;
+    background: url('../img/banner2.jpg') top center/cover;
+    &::before{        
+        content: "";
+        background: rgba(5, 13, 24, .3);
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1       
+    }
+    .hero-container {
+        position: relative;
+        z-index: 2;
+        min-width: 300px;
+    }
+    h1 {
+        margin: 0 0 10px;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 56px;
+        color: $white;
+    }
+    
+    p {
+        font-family: Poppins, sans-serif;
+        color: $white;
+        margin-bottom: 50px;
+        font-size: 26px;
+        span {
+            color: $white;
+            padding-bottom: 4px;
+            letter-spacing: 1px;
+            border-bottom: 3px solid $secondary-color
+        }
+        
+    }
+}
+#main {
+    margin-left: 300px
+}
+.section-bg {
+    background: #f5f8fd
+}
+
+.section-title {
+    padding-bottom: 30px;
+    p {
+        margin-bottom: 0
+    }
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        color: $primary-color;
+        &:after{           
+            content: "";
+            position: absolute;
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: $secondary-color;
+            bottom: 0;
+            left: 0
+        }
+    }
+}
+// ========================================== About us CSS ========================================== //
+.about {
+    .content {
+        h3 {
+            font-weight: 700;
+            font-size: 26px;
+            color: $primary-color;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            strong {
+                margin-right: 10px
+            }
+            i {
+                font-size: 16px;
+                margin-right: 5px;
+                color: $secondary-color;
+                line-height: 0
+            }
+            li {
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                a{
+                    color: $gray;
+                    &:hover{
+                        color: $dark-color;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        p{
+            &:last-child{
+                margin-bottom: 0 
+            }
+        }
+    }   
+}
+// ========================================== Facts CSS ========================================== //
+.facts{
+    padding-bottom: 30px;
+    .count-box {
+        padding: 30px;
+        width: 100%;
+        span {
+            font-size: 48px;
+            line-height: 40px;
+            display: block;
+            font-weight: 700;
+            color: #050d18;
+            margin-left: 60px;
+        }
+        i {
+            display: block;
+            font-size: 44px;
+            color: $secondary-color;
+            float: left;
+            line-height: 0;
+        }
+        p {
+            padding: 15px 0 0;
+            margin: 0 0 0 60px;
+            font-size: 14px;
+            color: #122f57;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            color: #122f57;
+            font-size: 15px;
+            transition: .3s ease-in-out; 
+            font-family: Poppins, sans-serif;
+            font-weight: 600    ;     
+            &:hover {
+                color: #1f5297
+            }
+        }
+        
+    }
+}
+// ========================================== Skills CSS ========================================== //
+
+.skills{
+    .progress-bar {
+        width: 1px;
+        height: 10px;
+        transition: .9s;
+        background-color: $secondary-color;
+    }
+    .progress {
+        height: 60px;
+        display: block;
+        background: 0 0;
+        border-radius: 0;
+        .skill {
+            padding: 0;
+            margin: 0 0 6px;
+            text-transform: uppercase;
+            display: block;
+            color: #050d18;
+            font-family: Poppins, sans-serif;
+            font-weight: 600;
+            .val {
+                float: right;
+                font-style: normal;
+            }
+        }
+        .progress-bar-wrap{
+            background: #dce8f8;
+            height: 10px
+        }
+    }
+}
+// ========================================== Resume CSS ========================================== //
+.resume{
+    .resume-title {
+        font-size: 26px;
+        font-weight: 700;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #050d18;
+    }
+    .resume-item {
+        padding: 0 0 20px 20px;
+        margin-top: -2px;
+        border-left: 2px solid #1f5297;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50px;
+            left: -9px;
+            top: 0;
+            background: $white;
+            border: 2px solid #1f5297;
+        }
+        &:last-child{
+            padding-bottom: 0;
+        }
+        h4 {
+            line-height: 18px;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #050d18;
+            margin-bottom: 10px;
+            font-family: Poppins, sans-serif;
+            font-weight: 600;
+        }
+        h5 {
+            font-size: 16px;
+            background: #e4edf9;
+            padding: 5px 15px;
+            display: inline-block;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+            li {
+                padding-bottom: 10px;
+            }
+        }
+        .url{
+            color: $gray;
+            &:hover{
+                color: $dark-color;
+                text-decoration: underline;
+            }
+        }
+        
+    }
+    
+}
+// ========================================== Portfolio CSS ========================================== //
+
+.portfolio{
+    .portfolio-item {
+        margin-bottom: 30px
+    }
+    #portfolio-flters {
+        padding: 2px 15px;
+        margin: 0 auto 35px;
+        list-style: none;
+        text-align: center;
+        background: $white;
+        border-radius: 50px;
+        li {
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px 15px 8px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1;
+            text-transform: uppercase;
+            color: $gray;
+            margin-bottom: 5px;
+            transition: .3s ease-in-out;
+            &:last-child {
+                margin-right: 0;
+            }
+            
+        }
+    }
+    .portfolio-wrap {
+        transition: .3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        &:hover{
+            .portfolio-links {
+                opacity: 1;
+                bottom: 0;
+            }
+            
+            &::before {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 1;
+            }
+        }
+        
+        .portfolio-links {
+            opacity: 1;
+            left: 0;
+            right: 0;
+            bottom: -60px;
+            z-index: 3;
+            position: absolute;
+            transition: .3s ease-in-out;
+            display: flex;
+            justify-content: center;
+            a+a {
+                border-left: 1px solid #37b3ed;
+            }
+            a {
+                color: $white;
+                font-size: 28px;
+                text-align: center;
+                background: rgba(20, 157, 221, .75);
+                transition: .3s;
+                width: 50%;
+                &:hover{
+                    background: rgba(20, 157, 221, .95);
+                }
+            }
+            
+        }
+        &::before {
+            content: "";
+            background: rgba(255, 255, 255, .5);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transition: .3s ease-in-out;
+            z-index: 2;
+            opacity: 0;
+        }
+    }
+    
+}
+// ========================================== Portfolio Details CSS ========================================== //
+.portfolio-details {
+    padding-top: 40px;
+    .portfolio-description {
+        padding-top: 30px;
+        h2 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        p {
+            padding: 0;
+        }
+        
+    }
+    .portfolio-details-slider {
+        img {
+            width: 100%;
+        }
+        .swiper-pagination{
+            margin-top: 20px;
+            position: relative;
+            .swiper-pagination-bullet{
+                width: 12px;
+                height: 12px;
+                background-color: $white;
+                opacity: 1;
+                border: 1px solid $secondary-color;
+            }
+            .swiper-pagination-bullet-active{
+                background-color: $secondary-color;
+            }
+        }
+    }
+    .portfolio-info {
+        padding: 30px;
+        box-shadow: 0 0 30px rgba(5, 13, 24, .08);
+        ul {
+            list-style: none;
+            padding: 0;
+            font-size: 15px;
+            li+li {
+                margin-top: 10px;
+            }
+            
+        }
+        h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+    }
+    
+}
+// ========================================== Testimonial CSS ========================================== //
+.testimonials{
+    .testimonials-carousel, .testimonials-slider{
+        overflow: hidden
+    }
+    .swiper-pagination {
+        margin-top: 20px;
+        position: relative;
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: $white;
+            opacity: 1;
+            border: 1px solid $secondary-color;
+        }
+        .swiper-pagination-bullet-active{
+            background-color: $secondary-color; 
+        }
+    }   
+    .testimonial-item {
+        box-sizing: content-box;
+        text-align: center;
+        min-height: 320px;
+        .testimonial-img {
+            width: 90px;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+        
+        
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 10px 0 5px;
+            color: #111;
+        }
+        
+        h4 {
+            font-size: 14px;
+            color: #999;
+            margin: 0;
+        }
+        
+        .quote-icon-left {
+            display: inline-block;
+            left: -5px;
+            position: relative;
+            color: #c3e8fa;
+            font-size: 26px;
+        }
+        
+        .quote-icon-right {
+            display: inline-block;
+            right: -5px;
+            position: relative;
+            top: 10px;
+            color: #c3e8fa;
+            font-size: 26px;
+        }
+        
+        p{
+            font-style: italic;
+            margin: 0 15px 35px;
+            padding: 20px;
+            background: $white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, .1);
+            &::after {
+                content: "";
+                width: 0;
+                height: 0;
+                border-top: 20px solid $white;
+                border-right: 20px solid transparent;
+                border-left: 20px solid transparent;
+                position: absolute;
+                bottom: -20px;
+                left: calc(50% - 20px);
+            }
+        }
+    }
+}
+// ========================================== Servicess CSS ========================================== //
+.services{
+    .icon {
+        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 54px;
+        height: 54px;
+        background: $secondary-color;
+        border-radius: 50%;
+        transition: .5s;
+        border: 1px solid $secondary-color;
+        i {
+            color: $white;
+            font-size: 24px;
+            line-height: 0;
+        }
+    }
+    .icon-box{
+        margin-bottom: 20px;
+        transition: .3s all ease;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+                 
+            &:hover{
+                background: $white;
+                box-shadow: 0 0 24px 0 rgba(0,0,0,.12);
+                .icon {
+                    background: $white;
+                }
+            }
+            
+    }
+    .title {
+        margin-left: 80px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-size: 18px;
+        a {
+            color: #343a40;
+        }
+        
+    }
+    .description {
+        margin-left: 80px;
+        line-height: 24px;
+        font-size: 14px;
+    }
+    
+}
+// ========================================== Contact CSS ========================================== //
+.contact {
+    padding-bottom: 130px;
+    .info {
+        background: $white;
+        width: 100%;
+        padding: 30px;
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, .12);
+        .address, .email, .phone, .social-links{
+            &:hover{
+                i{
+                    background: $secondary-color;
+                    color: $white 
+                }
+               
+            }
+        }
+        .email{
+            p {
+                padding-top: 5px
+            }
+        }
+        
+        i {
+            font-size: 20px;
+            color: $secondary-color;
+            float: left;
+            width: 44px;
+            height: 44px;
+            background: #dff3fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            transition: .3s ease-in-out;
+        }
+        h4 {
+            padding: 0 0 0 60px;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #050d18
+        }
+        p {
+            padding: 0 0 10px 60px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: $primary-color;
+            a {
+                color: $primary-color;
+                &:hover{
+                    color: $dark-color;
+                    text-decoration: underline
+                }
+            }
+        }
+        .social-links {
+            padding-left: 60px;
+            a {
+                font-size: 18px;
+                display: inline-block;
+                background: #333;
+                color: $white;
+                line-height: 1;
+                padding: 8px 0;
+                border-radius: 50%;
+                text-align: center;
+                width: 36px;
+                height: 36px;
+                transition: .3s;
+                margin-right: 10px;
+                &:hover{
+                    background: $secondary-color;
+                    color: $white  
+                }
+            }
+        }
+        
+    }
+    .php-email-form {
+        background: $white;
+        width: 100%;
+        padding: 30px;
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, .12);
+        input,textarea{
+            border-radius: 0;
+            box-shadow: none;
+            font-size: 14px ;
+            height: 44px;
+            padding: 10px 15px;
+        }
+        label {
+            padding-bottom: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+        }        
+        .sent-message {
+            display: none;
+            color: $white;
+            background: #18d26e;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600
+        }
+        .validate {
+            display: none;
+            color: red;
+            margin: 0 0 15px;
+            font-weight: 400;
+            font-size: 13px;
+        }
+        .error-message {
+            display: none;
+            color: $white;
+            background: #ed3c0d;
+            text-align: left;
+            padding: 15px;
+            font-weight: 600;
+            br+br {
+                margin-top: 25px
+            }
+            
+        }
+        .loading {
+            display: none;
+            background: $white;
+            text-align: center;
+            padding: 15px;
+            &::before{
+                :before {
+                    content: "";
+                    display: inline-block;
+                    border-radius: 50%;
+                    width: 24px;
+                    height: 24px;
+                    margin: 0 10px -6px 0;
+                    border: 3px solid #18d26e;
+                    border-top-color: #eee;
+                    animation: 1s linear infinite animate-loading
+                }
+            }
+        }
+    }
+   
+}
+// ========================================== Breadcrumbs CSS ========================================== //
+.breadcrumbs{
+    padding: 20px 0;
+    background: #f9f9f9;
+    h2 {
+        font-size: 26px;
+        font-weight: 300
+    }
+    ol {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+        li+li{
+            padding-left: 10px;
+            &::before {
+                display: inline-block;
+                padding-right: 10px;
+                color: #0e2442;
+                content: "/"
+            }
+        }
+    }
+}
+
+// ========================================== Footer CSS ========================================== //
+.footer {
+    padding: 15px;
+    color: #f4f6fd;
+    font-size: 14px;
+    left: 0;
+    z-index: 9999;
+    position: fixed;
+    bottom: 0;
+    width: 300px;
+    background: $dark-color;
+    .copyright {
+        text-align: center;
+    }
+    .credits {
+        padding-top: 5px;
+        text-align: center;
+        font-size: 13px;
+        color: #eaebf0;
+    }
+    
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}

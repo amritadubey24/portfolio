@@ -22,7 +22,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -30,7 +30,7 @@
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
   <!-- ======= Header ======= -->
-  <header id="header">
+  <header id="header" class="header">
     <div class="d-flex flex-column">
       <div class="profile">
         <img src="assets/img/img.png" alt="" class="img-fluid rounded-circle">
@@ -54,7 +54,7 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center hero__section">
     <div class="hero-container" data-aos="fade-in">
       <h1>Amrita Dubey</h1>
       <p>I'm <span class="typed" data-typed-items="Front-end Developer"></span></p>
@@ -217,8 +217,8 @@
               <p><em>Collaborating closely with the team to support projects during all phases of delivery</em></p>
               <ul>
                 <li>Vijay Nagar, Indore, Madhya Pradesh</li>
-                <li><a href="tel:8887807255">+91 99999-55555</a></li>
-                <li><a href="mailto:damrita290@gmail.com">damrita290@gmail.com</a></li>
+                <li><a href="tel:8887807255" class="url">+91 99999-55555</a></li>
+                <li><a href="mailto:damrita290@gmail.com" class="url">damrita290@gmail.com</a></li>
               </ul>
             </div>
             <h3 class="resume-title">Education</h3>
@@ -376,36 +376,48 @@
         </div>
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="title"><a href="javascript:void(0);">HTML & CSS Responsive Web Design</a></h4>
-            <p class="description">Responsive web design, powered by HTML and CSS, enables sites to adjust seamlessly across devices, ensuring optimal user experience and visual appeal on various screen sizes.</p>
+            <div class="service-box">
+              <div class="icon"><i class="bi bi-briefcase"></i></div>
+              <h4 class="title"><a href="javascript:void(0);">HTML & CSS Responsive Web Design</a></h4>
+              <p class="description">Responsive web design, powered by HTML and CSS, enables sites to adjust seamlessly across devices, ensuring optimal user experience and visual appeal on various screen sizes.</p>
+            </div>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-card-checklist"></i></div>
-            <h4 class="title"><a href="javascript:void(0);">React JS Development</a></h4>
-            <p class="description">React JS is indispensable for front-end developers, offering a component-based structure and virtual DOM that streamline UI creation. Its efficiency in rendering and real-time updates empowers seamless development of dynamic and user-friendly web interfaces.</p>
+            <div class="service-box">
+              <div class="icon"><i class="bi bi-card-checklist"></i></div>
+              <h4 class="title"><a href="javascript:void(0);">React JS Development</a></h4>
+              <p class="description">React JS is indispensable for front-end developers, offering a component-based structure and virtual DOM that streamline UI creation. Its efficiency in rendering and real-time updates empowers seamless development of dynamic and user-friendly web interfaces.</p>
+            </div>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-bar-chart"></i></div>
-            <h4 class="title"><a href="javascript:void(0);">SEO</a></h4>
-            <p class="description">SEO proficiency is valuable for frontend developers, enabling optimization of website elements like HTML and metadata for improved search engine visibility. This ensures that the visually appealing websites they create not only captivate users but also rank well, expanding their online reach effectively.</p>
+            <div class="service-box">
+              <div class="icon"><i class="bi bi-bar-chart"></i></div>
+              <h4 class="title"><a href="javascript:void(0);">SEO</a></h4>
+              <p class="description">SEO proficiency is valuable for frontend developers, enabling optimization of website elements like HTML and metadata for improved search engine visibility. This ensures that the visually appealing websites they create not only captivate users but also rank well, expanding their online reach effectively.</p>
+            </div>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-binoculars"></i></div>
-            <h4 class="title"><a href="javascript:void(0);">Fixing bugs and testing for usability</a></h4>
-            <p class="description">Frontend developers are pivotal in bug resolution and usability testing. They adeptly address code issues, ensuring seamless user experiences across platforms. Thorough testing guarantees visually appealing and user-friendly web creations.</p>
+            <div class="service-box">
+              <div class="icon"><i class="bi bi-binoculars"></i></div>
+              <h4 class="title"><a href="javascript:void(0);">Fixing bugs and testing for usability</a></h4>
+              <p class="description">Frontend developers are pivotal in bug resolution and usability testing. They adeptly address code issues, ensuring seamless user experiences across platforms. Thorough testing guarantees visually appealing and user-friendly web creations.</p>
+            </div>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="bi bi-brightness-high"></i></div>
-            <h4 class="title"><a href="javascript:void(0);">PSD to Bootstrap Services</a></h4>
-            <p class="description">
-              "Frontend developers rely on PSD to Bootstrap services to seamlessly convert design files (PSD) into responsive web layouts. This accelerates development, ensuring visually appealing and mobile-responsive websites."</p>
+            <div class="service-box">
+              <div class="icon"><i class="bi bi-brightness-high"></i></div>
+              <h4 class="title"><a href="javascript:void(0);">PSD to Bootstrap Services</a></h4>
+              <p class="description">
+                "Frontend developers rely on PSD to Bootstrap services to seamlessly convert design files (PSD) into responsive web layouts. This accelerates development, ensuring visually appealing and mobile-responsive websites."</p>
+            </div>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-            <h4 class="title"><a href="javascript:void(0);">Implementing design on mobile website</a></h4>
-            <p class="description">
-              "Frontend developers adeptly convert designs into mobile websites, creating responsive layouts for a seamless user experience across devices. Their expertise ensures visually engaging interfaces that perform optimally on mobile screens."</p>
+            <div class="service-box">
+              <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+              <h4 class="title"><a href="javascript:void(0);">Implementing design on mobile website</a></h4>
+              <p class="description">
+                "Frontend developers adeptly convert designs into mobile websites, creating responsive layouts for a seamless user experience across devices. Their expertise ensures visually engaging interfaces that perform optimally on mobile screens."</p>
+            </div>
           </div>
         </div>
       </div>
@@ -462,7 +474,7 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" class="button">Send Message</button></div>
             </form>
           </div>
         </div>
@@ -471,10 +483,10 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="footer" class="footer">
     <div class="container">
       <div class="credits">
-        Designed by <a href="javascript:void(0);">Amrita Dubey</a>
+        © Copyright <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> Designed by <a href="index.html">Amrita Dubey</a>
       </div>
     </div>
   </footer><!-- End  Footer -->
@@ -492,8 +504,6 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
